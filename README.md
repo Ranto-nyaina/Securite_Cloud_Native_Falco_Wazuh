@@ -1,6 +1,6 @@
 # 🛡️ Sécurité Cloud-Native — Détection et Réponse avec Falco et Wazuh
 
-Projet pédagogique — Master 1, mention Objets Connectés et Cybersécurité (OCC), Groupe 5
+Projet pédagogique — Master 1, mention Objets Connectés et Cybersécurité (OCC)
 Année universitaire 2025-2026.
 
 Mise en place d'une plateforme de surveillance et de réponse automatisée aux attaques dans un environnement Kubernetes, combinant détection comportementale (Falco) et centralisation SIEM/XDR (Wazuh) sur un cluster K3s.
@@ -150,7 +150,6 @@ Voir `rapport/GUIDE_INSTALLATION.pdf` pour le détail des limites et des points 
 ## 👨‍🎓 Contexte académique
 
 - **Formation :** Master 1, mention Objets Connectés et Cybersécurité (OCC)
-- **Groupe :** Groupe 5
 - **Année universitaire :** 2025-2026
 
 ---
