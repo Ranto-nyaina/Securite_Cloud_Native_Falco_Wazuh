@@ -29,12 +29,12 @@ Comment surveiller en continu un environnement Kubernetes, détecter des comport
 ## 🏗️ Architecture du projet
 
 ```text
-┌──────────┐     ┌──────────────┐    ┌────────────────┐     ┌────────────────┐     ┌─────────────────┐
-│  Falco   │───▶│ Wazuh Agent  │───▶│ Wazuh Indexer  │───▶│ Wazuh Manager   │───▶│ Active Response │
-│(K3s/pod) │     │  (collecte)  │    │(stock./indexe) │     │(analyse/corrèle)│    │(isole/recrée pod)│
-└──────────┘     └──────────────┘    └────────────────┘     └────────────────┘     └─────────────────┘
-   Détection        Collecte              Stockage               Corrélation            Réponse
-   d'anomalie        alerte               des alertes            & gravité             à l'incident
+┌────────────┐   ┌─────────────┐   ┌─────────────────┐   ┌───────────────────┐   ┌────────────────────┐
+│   Falco    │──▶│ Wazuh Agent │──▶│  Wazuh Indexer  │──▶│   Wazuh Manager   │──▶│  Active Response   │
+│ (K3s/pod)  │   │ (collecte)  │   │ (stock./indexe) │   │ (analyse/corrèle) │   │ (isole/recrée pod) │
+└────────────┘   └─────────────┘   └─────────────────┘   └───────────────────┘   └────────────────────┘
+  Détection         Collecte            Stockage              Corrélation               Réponse
+  d'anomalie       de l'alerte         des alertes             & gravité              à l'incident
 ```
 
 Le détail de chaque étape (installation, configuration, test) est documenté dans `rapport/GUIDE_INSTALLATION.pdf`.
