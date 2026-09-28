@@ -1,7 +1,6 @@
 # 🛡️ Sécurité Cloud-Native — Détection et Réponse avec Falco et Wazuh
 
-Projet pédagogique — Master 1, mention Objets Connectés et Cybersécurité (OCC)
-Année universitaire 2025-2026.
+Projet pédagogique — Master 1, mention Objets Connectés et Cybersécurité (OCC), année universitaire 2025-2026.
 
 Mise en place d'une plateforme de surveillance et de réponse automatisée aux attaques dans un environnement Kubernetes, combinant détection comportementale (Falco) et centralisation SIEM/XDR (Wazuh) sur un cluster K3s.
 
@@ -30,12 +29,12 @@ Comment surveiller en continu un environnement Kubernetes, détecter des comport
 ## 🏗️ Architecture du projet
 
 ```text
-┌──────────┐    ┌──────────────┐    ┌────────────────┐    ┌────────────────┐    ┌─────────────────┐
-│  Falco   │───▶│ Wazuh Agent  │───▶│ Wazuh Indexer   │───▶│ Wazuh Manager   │───▶│ Active Response  │
-│(K3s/pod) │    │  (collecte)  │    │(stock./indexe)  │    │(analyse/corrèle)│    │(isole/recrée pod)│
-└──────────┘    └──────────────┘    └────────────────┘    └────────────────┘    └─────────────────┘
-   Détection        Collecte            Stockage            Corrélation            Réponse
-   d'anomalie        alerte             des alertes          & gravité             à l'incident
+┌──────────┐     ┌──────────────┐    ┌────────────────┐     ┌────────────────┐     ┌─────────────────┐
+│  Falco   │───▶│ Wazuh Agent  │───▶│ Wazuh Indexer  │───▶│ Wazuh Manager   │───▶│ Active Response │
+│(K3s/pod) │     │  (collecte)  │    │(stock./indexe) │     │(analyse/corrèle)│    │(isole/recrée pod)│
+└──────────┘     └──────────────┘    └────────────────┘     └────────────────┘     └─────────────────┘
+   Détection        Collecte              Stockage               Corrélation            Réponse
+   d'anomalie        alerte               des alertes            & gravité             à l'incident
 ```
 
 Le détail de chaque étape (installation, configuration, test) est documenté dans `rapport/GUIDE_INSTALLATION.pdf`.
